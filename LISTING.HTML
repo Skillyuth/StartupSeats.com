@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StartupSeats – List Your Office Space</title>
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    form {
+      background: white;
+      max-width: 700px;
+      width: 100%;
+      border-radius: 15px;
+      padding: 30px 40px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+      overflow-y: auto;
+      max-height: 90vh;
+    }
+
+    h1 {
+      text-align: center;
+      color: #4a00e0;
+      margin-bottom: 25px;
+      font-weight: 900;
+      font-size: 2.4rem;
+      user-select: none;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #555;
+      margin: 25px 0 15px 0;
+      border-bottom: 2px solid #2575fc;
+      padding-bottom: 5px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin: 12px 0 6px 0;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    select,
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+      resize: vertical;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="number"]:focus,
+    select:focus,
+    textarea:focus,
+    input[type="file"]:focus {
+      outline: none;
+      border-color: #4a00e0;
+      box-shadow: 0 0 6px rgba(74, 0, 224, 0.4);
+    }
+
+    /* Amenities checkboxes container */
+    .checkbox-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 8px;
+    }
+
+    .checkbox-group label {
+      flex: 1 0 45%;
+      background: #f0f0ff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      user-select: none;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      cursor: pointer;
+      transform: scale(1.2);
+      margin: 0;
+    }
+
+    .checkbox-group input[type="checkbox"]:checked + span {
+      background: #4a00e0;
+      color: white;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+
+    /* Button */
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 15px;
+      font-size: 1.2rem;
+      background: #4a00e0;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(74, 0, 224, 0.5);
+      transition: background 0.3s ease;
+      user-select: none;
+    }
+
+    button:hover {
+      background: #651fff;
+      box-shadow: 0 10px 25px rgba(101, 31, 255, 0.6);
+    }
+
+    /* Scrollbar for form if needed */
+    form::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    form::-webkit-scrollbar-track {
+      background: #eee;
+      border-radius: 4px;
+    }
+
+    form::-webkit-scrollbar-thumb {
+      background: #4a00e0;
+      border-radius: 4px;
+    }
+
+    /* Responsive for tablets and mobile */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+        align-items: center;
+      }
+      form {
+        padding: 20px 25px;
+        max-height: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .checkbox-group label {
+        flex: 1 0 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <form action="https://formsubmit.co/dca48ec7b5ee11adf14fe68929aa733f" method="POST">
+
+    <h1>🏢 StartupSeats – List Your Office Space</h1>
+
+    <!-- Section 1 -->
+    <h2>📘 Basic Contact Info</h2>
+    <label for="name">Your Name</label>
+    <input id="name" type="text" name="Name" required placeholder="Enter your full name" />
+
+    <label for="company">Business / Company Name</label>
+    <input id="company" type="text" name="Company Name" required placeholder="Your business or company name" />
+
+    <label for="email">Email Address</label>
+    <input id="email" type="email" name="Email" required placeholder="example@mail.com" />
+
+    <label for="phone">Phone Number (WhatsApp preferred)</label>
+    <input id="phone" type="text" name="Phone Number" required placeholder="+91 98765 43210" />
+
+    <!-- Section 2 -->
+    <h2>📍 Office Location</h2>
+    <label for="city">City</label>
+    <select id="city" name="City" required>
+      <option value="" disabled selected>-- Select City --</option>
+      <option>Noida</option>
+      <option>Delhi</option>
+      <option>Mumbai</option>
+      <option>Bangalore</option>
+      <option>Hyderabad</option>
+      <option>Pune</option>
+      <option>Chennai</option>
+      <option>Other</option>
+    </select>
+
+    <label for="address">Complete Office Address</label>
+    <textarea id="address" name="Office Address" rows="4" required placeholder="Building name, floor, landmark, pincode"></textarea>
+
+    <label for="maps">Google Maps Link (if available)</label>
+    <input id="maps" type="text" name="Google Maps Link" placeholder="Paste Google Maps URL here" />
+
+    <!-- Section 3 -->
+    <h2>💺 Seat & Space Details</h2>
+    <label for="total-seats">Total Seats in Office</label>
+    <input id="total-seats" type="number" name="Total Seats" required min="1" placeholder="e.g. 50" />
+
+    <label for="available-seats">Seats Available for Rent</label>
+    <input id="available-seats" type="number" name="Seats Available" required min="1" placeholder="e.g. 20" />
+
+    <label for="monthly-rent">Monthly Rent Per Seat (₹)</label>
+    <input id="monthly-rent" type="number" name="Monthly Rent (₹)" required min="1" placeholder="e.g. 5000" />
+
+    <label for="min-duration">Minimum Duration (in months)</label>
+    <select id="min-duration" name="Minimum Duration" required>
+      <option value="" disabled selected>-- Select Duration --</option>
+      <option>1</option>
+      <option>3</option>
+      <option>6</option>
+      <option>Flexible</option>
+    </select>
+
+    <!-- Section 4 -->
+    <h2>🛠️ Amenities</h2>
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="Amenities" value="Wi-Fi" /><span>Wi-Fi</span></label>
+      <label><input type="checkbox" name="Amenities" value="Air Conditioning" /><span>Air Conditioning</span></label>
+      <label><input type="checkbox" name="Amenities" value="Power Backup" /><span>Power Backup</span></label>
+      <label><input type="checkbox" name="Amenities" value="Meeting Room" /><span>Meeting Room</span></label>
+      <label><input type="checkbox" name="Amenities" value="Pantry" /><span>Pantry / Kitchen</span></label>
+      <label><input type="checkbox" name="Amenities" value="Parking" /><span>Parking</span></label>
+      <label><input type="checkbox" name="Amenities" value="Tea/Coffee" /><span>Tea/Coffee</span></label>
+      <label><input type="checkbox" name="Amenities" value="Reception" /><span>Reception / Admin</span></label>
+    </div>
+
+    <!-- Section 5 -->
+    <h2>📸 Upload Office Photos</h2>
+    <label for="photos">Upload up to 4 Photos</label>
+    <input id="photos" type="file" name="Office Photos" accept="image/*" multiple />
+
+    <!-- Section 6 -->
+    <h2>📝 Confirmation</h2>
+    <label for="ready">Are you ready to receive inquiries?</label>
+    <select id="ready" name="Ready to receive inquiries?" required>
+      <option value="" disabled selected>Select Yes or No</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+
+    <label for="additional">Anything else you'd like us to know?</label>
+    <textarea id="additional" name="Additional Info" rows="4" placeholder="Additional notes or comments"></textarea>
+
+    <!-- Hidden inputs -->
+    <<input type="hidden" name="_next" value="https://darkslategray-spoonbill-576225.hostingersite.com/thankyou.html">
+    <input type="hidden" name="_captcha" value="false" />
+
+    <button type="submit">🚀 Submit Listing</button>
+  </form>
+
+</body>
+</html>
